@@ -1,6 +1,7 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { cldAssetsLoader } from 'astro-cloudinary/loaders';
 
 function removeDupsAndLowerCase(array: string[]) {
 	return [...new Set(array.map((str) => str.toLowerCase()))];
@@ -56,4 +57,15 @@ const tag = defineCollection({
 	}),
 });
 
-export const collections = { post, note, tag };
+const img = defineCollection({
+  loader: cldAssetsLoader({
+    limit: 10,
+  }),
+  schema: z.object({
+    public_id: z.string(),
+    width: z.number(),
+    height: z.number(),
+  }),
+});
+
+export const collections = { post, note, tag, img };
