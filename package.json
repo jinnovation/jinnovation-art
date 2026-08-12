@@ -24,6 +24,7 @@
 		"astro-cloudinary": "^1.4.0",
 		"astro-expressive-code": "^0.44.0",
 		"astro-icon": "^1.1.5",
+		"astro-masonry": "^1.2.2",
 		"astro-robots-txt": "^1.0.0",
 		"astro-webmanifest": "^1.0.0",
 		"cssnano": "^8.0.2",
