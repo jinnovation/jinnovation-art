@@ -58,7 +58,15 @@ const tag = defineCollection({
 });
 
 const sketches = defineCollection({
-  loader: cldAssetsLoader({folder: "portfolio/sketches"}),
+    loader: cldAssetsLoader({ folder: "portfolio/sketches" }),
 });
 
-export const collections = { post, note, tag, sketches };
+const fanart = defineCollection({
+    loader: cldAssetsLoader({ folder: "portfolio/fan_art" }),
+})
+
+const oc = defineCollection({
+    loader: cldAssetsLoader({ folder: "portfolio/independent" }),
+})
+
+export const collections = { post, note, tag, sketches, fanart, oc };
