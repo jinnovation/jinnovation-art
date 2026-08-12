@@ -8,7 +8,7 @@ const meta = {
   title: "Portfolio",
 };
 
-const imgs = await getCollection("img");
+const imgs = await getCollection("image");
 ---
 
 <PageLayout meta={meta}>
@@ -22,8 +22,8 @@ const imgs = await getCollection("img");
             <li>
               <CldImage
                 src={img.data.public_id}
-                width={img.data.width}
-                height={img.data.height}
+                width={img.data.width / 4}
+                height={img.data.height / 4}
                 alt=""
               />
               
