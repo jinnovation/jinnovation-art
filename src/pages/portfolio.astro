@@ -6,6 +6,7 @@ import { getCldImageUrl } from "astro-cloudinary/helpers";
 import { Masonry } from "astro-masonry";
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import Admonition from "@/components/Admonition.astro";
 
 const meta = {
 	description: "Latest work",
@@ -19,8 +20,10 @@ const oc = await getCollection("oc");
 
 <PageLayout meta={meta}>
 	<h1 class="title mb-12">Portfolio</h1>
+  <Admonition type="caution" title="Under construction">
+    <p>Building this page is still very in-progress. Stuff might break. Check back later. (:</p>
+    </Admonition>
 	<div class="prose prose-sm prose-cactus max-w-none">
-		<p>Under construction...</p>
 		<Masonry
 			breakpointCols={{
 				default: 3,
