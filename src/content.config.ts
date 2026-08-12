@@ -57,8 +57,8 @@ const tag = defineCollection({
     }),
 });
 
-const image = defineCollection({
-  loader: cldAssetsLoader({folder: "portfolio"}),
+const sketches = defineCollection({
+  loader: cldAssetsLoader({folder: "portfolio/sketches"}),
 });
 
-export const collections = { post, note, tag, image };
+export const collections = { post, note, tag, sketches };

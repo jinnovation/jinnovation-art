@@ -8,7 +8,7 @@ const meta = {
   title: "Portfolio",
 };
 
-const imgs = await getCollection("image");
+const sketches = await getCollection("sketches");
 ---
 
 <PageLayout meta={meta}>
@@ -18,7 +18,7 @@ const imgs = await getCollection("image");
       Under construction...
     </p>
     <ul class="space-y-6" role="list">
-      {imgs.map((img) => (
+      {sketches.map((img) => (
             <li>
               <CldImage
                 src={img.data.public_id}
