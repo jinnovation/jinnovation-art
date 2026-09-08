@@ -59,14 +59,32 @@ const tag = defineCollection({
 
 const sketches = defineCollection({
 	loader: cldAssetsLoader({ folder: "portfolio/sketches" }),
+	schema: z.object({
+		public_id: z.string().optional(),
+		width: z.number().int(),
+		height: z.number().int(),
+		created_at: z.iso.datetime(),
+	}),
 });
 
 const fanart = defineCollection({
 	loader: cldAssetsLoader({ folder: "portfolio/fan_art" }),
+	schema: z.object({
+		public_id: z.string().optional(),
+		width: z.number().int(),
+		height: z.number().int(),
+		created_at: z.iso.datetime(),
+	}),
 });
 
 const oc = defineCollection({
 	loader: cldAssetsLoader({ folder: "portfolio/independent" }),
+	schema: z.object({
+		public_id: z.string().optional(),
+		width: z.number().int(),
+		height: z.number().int(),
+		created_at: z.iso.datetime(),
+	}),
 });
 
 export const collections = { post, note, tag, sketches, fanart, oc };
